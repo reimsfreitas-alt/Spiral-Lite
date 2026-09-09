@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spiral Lite — Recuperação de Leads</title>
+<meta name="description" content="Spiral Lite recupera leads que ficaram pelo caminho com abordagem no momento certo, respeitando consentimento e controle.">
+<style>
+:root{--bg:#07100e;--panel:#0d1815;--panel2:#101e1a;--line:#263a34;--text:#edf4f0;--muted:#9aaba4;--green:#63d7a4;--green2:#2bb879;--gold:#d8bd76;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(80% 55% at 78% -5%,#17382d 0,transparent 55%),var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.top{position:sticky;top:0;z-index:20;background:#07100eea;backdrop-filter:blur(14px);border-bottom:1px solid #182822}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{font:700 14px ui-monospace,monospace;letter-spacing:.12em}.brand b{color:var(--green)}.links{display:flex;gap:20px;align-items:center;color:var(--muted);font-size:12px}.links a:hover{color:var(--text)}
+.cta{border:1px solid #355347;padding:9px 13px;border-radius:7px}.primary{background:var(--green);color:#06120d;border-color:var(--green)}
+section{padding:86px 0;border-top:1px solid #15251f}.hero{border-top:0;padding:78px 0 86px}.hero-grid{display:grid;grid-template-columns:1fr .95fr;gap:55px;align-items:center}
+.eyebrow{font:700 11px ui-monospace,monospace;color:var(--green);letter-spacing:.16em}.hero h1{font-size:clamp(48px,6.5vw,78px);line-height:.96;letter-spacing:-.055em;max-width:10ch;margin:17px 0}.hero h1 em{font-style:normal;color:var(--green)}
+.lead,.sub{color:var(--muted);font-size:18px;max-width:65ch}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 18px}.btn{display:inline-flex;border:1px solid #355047;border-radius:8px;padding:12px 17px;font-size:14px;font-weight:700}.btn.primary{background:var(--green);color:#06120d}
+.instrument{border:1px solid #2b463b;border-radius:15px;background:linear-gradient(180deg,#10201b,#09120f);padding:22px;box-shadow:0 28px 80px #0008}.instrument-top{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:18px}.status{color:#07140f;background:var(--green);padding:5px 8px;border-radius:5px;font:800 10px ui-monospace,monospace}.metric{border:1px solid var(--line);background:#0a1512;border-radius:10px;padding:18px}.metric small{display:block;color:#6f8279;font:10px ui-monospace,monospace;letter-spacing:.12em;margin-bottom:7px}.metric strong{font:700 25px ui-monospace,monospace}.trace{margin-top:14px;color:#81948b;font:11px/1.8 ui-monospace,monospace}.trace b{color:var(--green)}
+.head{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;margin-bottom:30px}.head h2{font-size:clamp(32px,4vw,51px);line-height:1.03;letter-spacing:-.04em;margin:8px 0}.head p{color:var(--muted);font-size:17px}
+.statement{border-left:2px solid var(--green);padding-left:17px;font-size:21px;margin:30px 0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:28px}.card{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:23px}.card h3{margin:0 0 9px;font-size:20px}.card p{margin:0;color:var(--muted)}.card.green h3{color:var(--green)}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);border-radius:13px;overflow:hidden}.step{padding:20px 14px;border-right:1px solid #1b2b25}.step:last-child{border:0}.step .num{color:#62766d;font:10px ui-monospace,monospace}.step h3{color:var(--green);font:700 11px ui-monospace,monospace;margin:28px 0 8px}.step p{font-size:12px;color:var(--muted);margin:0;line-height:1.45}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.video{border:1px solid #2a4338;border-radius:13px;background:#050908;overflow:hidden}.video video{width:100%;height:auto;display:block;background:#000}.caption{padding:11px 14px;color:#71837a;font:10px ui-monospace,monospace}
+.pilot{border:1px solid #315345;background:linear-gradient(135deg,#0c1b16,#09110e);padding:36px;border-radius:14px}.pilot h2{font-size:clamp(36px,4.8vw,57px);line-height:1.02;max-width:12ch;margin:8px 0}.foot{padding:34px 0 48px;color:#63756d;font:11px ui-monospace,monospace}
+@media(max-width:920px){.hero-grid,.head,.grid2,.video-grid{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid #1b2b25}.links a:not(.cta){display:none}}
+@media(max-width:560px){.wrap{width:min(var(--max),calc(100% - 28px))}.hero{padding-top:55px}.hero h1{font-size:45px}.lead{font-size:17px}.pilot{padding:27px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav">
+<a class="brand" href="#top">SPIRAL <b>LITE</b></a>
+<nav class="links"><a href="#problema">Problema</a><a href="#metodo">Método</a><a href="#videos">Vídeos</a><a href="#controle">Controle</a><a class="cta primary" href="#piloto">Conheça o Spiral Lite</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">SPIRAL LITE · LEADS QUE VOLTAM</div>
+<h1>Seu lead não sumiu. Ele só precisa de um <em>novo início.</em></h1>
+<p class="lead">O Spiral Lite ajuda sua empresa a recuperar leads que ficaram pelo caminho, com mensagens personalizadas, no momento certo, e total respeito à privacidade.</p>
+<div class="actions"><a class="btn primary" href="#piloto">Conheça o Spiral Lite →</a><a class="btn" href="#videos">Ver os vídeos</a></div>
+<div class="mono" style="font-size:10px;color:#6e8278">INTENT → POLICY → AUTHORIZATION → PROPAGATION → OBSERVATION</div>
+</div>
+<div class="instrument">
+<div class="instrument-top"><span class="eyebrow">RECUPERAÇÃO DE LEAD</span><span class="status">CONTROLADO</span></div>
+<div class="metric"><small>FLUXO</small><strong>Lead Ads → Spiral → WhatsApp</strong></div>
+<div class="trace">
+<div><span>01</span> <b>INTENT</b> identifica a oportunidade de retomada</div>
+<div><span>02</span> <b>POLICY</b> define o que pode ser feito</div>
+<div><span>03</span> <b>AUTHORIZATION</b> limita a ação</div>
+<div><span>04</span> <b>PROPAGATION</b> entrega a mensagem aprovada</div>
+<div><span>05</span> <b>OBSERVATION</b> registra o resultado</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="problema"><div class="wrap">
+<div class="head"><div><div class="eyebrow">O PROBLEMA</div><h2>O lead não desapareceu. A conversa parou.</h2></div>
+<p>Entre o primeiro interesse e uma nova conversa existe um intervalo. É nesse intervalo que oportunidades esfriam — muitas vezes sem que alguém perceba.</p></div>
+<div class="statement">Recuperar não é insistir. É reconhecer quando existe espaço legítimo para um novo passo.</div>
+<div class="grid2"><div class="card"><h3>O que costuma acontecer</h3><p>O lead demonstra interesse, a conversa não avança e o contato fica parado. O time segue para a próxima oportunidade.</p></div>
+<div class="card green"><h3>O que o Lite faz</h3><p>Seleciona oportunidades elegíveis, aplica uma política de abordagem e inicia uma nova conversa de forma controlada.</p></div></div>
+</div></section>
+
+<section id="metodo"><div class="wrap">
+<div class="head"><div><div class="eyebrow">O INSTRUMENTO</div><h2>Recuperação governada, não disparo em massa.</h2></div>
+<p>O Spiral Lite transforma uma retomada comercial em um fluxo observável: cada ação nasce de uma intenção e passa por uma fronteira de controle.</p></div>
+<div class="flow">
+<div class="step"><span class="num">01</span><h3>INTENT</h3><p>Definir a intenção de recuperar.</p></div>
+<div class="step"><span class="num">02</span><h3>POLICY</h3><p>Estabelecer a regra da abordagem.</p></div>
+<div class="step"><span class="num">03</span><h3>AUTHORIZATION</h3><p>Autorizar somente o escopo permitido.</p></div>
+<div class="step"><span class="num">04</span><h3>PROPAGATION</h3><p>Enviar a mensagem aprovada.</p></div>
+<div class="step"><span class="num">05</span><h3>OBSERVATION</h3><p>Observar a resposta.</p></div>
+<div class="step"><span class="num">06</span><h3>OUTCOME</h3><p>Registrar o resultado.</p></div>
+</div>
+</div></section>
+
+<section id="videos"><div class="wrap">
+<div class="head"><div><div class="eyebrow">SPIRAL LITE · VÍDEOS</div><h2>Veja o produto em movimento.</h2></div>
+<p>Dois vídeos curtos apresentam a proposta do Spiral Lite. Os arquivos originais são mantidos com áudio e proporção preservados.</p></div>
+<div class="video-grid">
+<div class="video"><video controls playsinline preload="metadata" src="videos/spiral-lite-video-01.mp4"></video><div class="caption">SPIRAL LITE · VÍDEO 01 · 10s</div></div>
+<div class="video"><video controls playsinline preload="metadata" src="videos/spiral-lite-video-02.mp4"></video><div class="caption">SPIRAL LITE · VÍDEO 02 · 10s</div></div>
+</div>
+</div></section>
+
+<section id="controle"><div class="wrap">
+<div class="head"><div><div class="eyebrow">CONTROLE</div><h2>Você continua no comando.</h2></div>
+<p>O Lite não transforma automação em licença para fazer qualquer coisa. A ação é condicionada ao escopo definido e o fluxo deixa registro do que ocorreu.</p></div>
+<div class="grid2"><div class="card"><h3>Consentimento</h3><p>Abordagem responsável e compatível com as regras definidas pela operação.</p></div>
+<div class="card"><h3>Observabilidade</h3><p>O resultado da tentativa de retomada faz parte do fluxo, em vez de desaparecer depois do envio.</p></div></div>
+</div></section>
+
+<section id="piloto"><div class="wrap"><div class="pilot">
+<div class="eyebrow">SPIRAL LITE · PRÓXIMO PASSO</div>
+<h2>Recupere o lead antes que ele esfrie.</h2>
+<p class="sub">Conheça o fluxo de recuperação e veja como ele pode ser aplicado à sua operação.</p>
+<div class="actions"><a class="btn primary" href="mailto:comercial@spiralwealth.com.br?subject=Spiral%20Lite%20-%20Quero%20conhecer">Quero conhecer o Spiral Lite →</a></div>
+</div></div></section>
+</main>
+
+<footer class="foot"><div class="wrap">SPIRAL LITE · SPIRAL CODES · RECUPERAÇÃO DE LEADS COM CONTROLE</div></footer>
+</body>
+</html>
