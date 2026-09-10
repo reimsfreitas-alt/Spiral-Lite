@@ -1,0 +1,4 @@
+lead_id,phone,email,created_at,source_ref,opted_out
+L001,5511999990001,a@example.com,2026-08-05T12:00:00Z,SRC-001,false
+L002,5511999990002,b@example.com,2026-08-15T12:00:00Z,SRC-002,true
+L003,5511999990001,a@example.com,2026-08-10T12:00:00Z,SRC-003,false
