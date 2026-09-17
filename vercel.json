@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/cowboy", "destination": "/cowboy.html" }
+    { "source": "/cowboy", "destination": "/cowboy.html" },
+    { "source": "/portfolio", "destination": "/portfolio.html" }
   ]
 }
